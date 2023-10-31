@@ -19,17 +19,18 @@
             
             <img src="Logo.png" alt="logo">
         <nav>
+            
             <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#Featured">Featured</a></li>
                 <li><a href="Contact.html">Contact us</a></li>
-                <li><input type="text" class="search-bar" placeholder="Search"></li>
-                <li><button class="search-button">Search</button></li>
                 <li><i class="fas fa-shopping-cart cart-icon"></i></li>
+                <li><a href="cart.html">Cart</a></li>
                 
             </ul>
-        
         </nav>
+        <hr>
+
         <div class="text">
 
         </div>
@@ -47,17 +48,34 @@
         </section>
      
         <section id="Featured">
-            <div class="featured-container">
-                <h2>Featured Products</h2>
+            <script>
+                let cart = []; // Initialize an empty shopping cart
 
+// Function to add an item to the cart
+function addToCart(item) {
+    cart.push(item);
+    updateCartIcon();
+}
+
+// Function to update the cart icon in the navigation bar
+function updateCartIcon() {
+    const cartIcon = document.querySelector('.cart-icon');
+    cartIcon.textContent = cart.length; // Display the number of items in the cart
+}
+            </script>
+            <div class="featured-container">
+               
+                <h2>Featured Products</h2>
                 <div class="product-row">
                     <div class="product">
+                        <a href="short_tshirt.html">
                         <img src="Men short and Tshirt.jpg" alt="product image">
+                    </a>
                         <div class="product-details">
                             <h3>Short and Tshirt</h3>
                         <p>Category: Men</p>
-                        <p>Price: $49.99</p>
-                        <button class="add-to-cart-button">ADD TO CART</button>                      
+                        <p>Price: $60</p>
+                        <button class="add-to-cart-button" onclick="addToCart('Product Name', 60.00)">ADD TO CART</button>                 
                     </div>
                     </div>
 
@@ -67,8 +85,8 @@
                         <div class="product-details">
                             <h3>Men Trouser</h3>
                         <p>Category: Men</p>
-                        <p>Price: $59.99</p>
-                        <button class="add-to-cart-button">ADD TO CART</button>                      
+                        <p>Price: $45</p>
+                        <button class="add-to-cart-button" onclick="addToCart('Product Name', 45)">ADD TO CART</button>                   
                     </div>
                     </div>
 
@@ -78,8 +96,8 @@
                         <div class="product-details">
                             <h3>Ladies Top</h3>
                         <p>Category: Women</p>
-                        <p>Price: $39.99</p>
-                        <button class="add-to-cart-button">ADD TO CART</button>                      
+                        <p>Price: $40</p>
+                        <button class="add-to-cart-button" onclick="addToCart('Product Name', 40)">ADD TO CART</button>                      
                     </div>
                     </div>
                     
@@ -90,7 +108,7 @@
                             <h3>Men Shirts</h3>
                         <p>Category: Men</p>
                         <p>Price: $45</p>
-                        <button class="add-to-cart-button">ADD TO CART</button>                      
+                        <button class="add-to-cart-button" onclick="addToCart('Product Name', 45)">ADD TO CART</button>                   
                     </div>
                     </div>
                     <div class="product">
@@ -99,7 +117,7 @@
                             <h3>Sport Jacket</h3>
                         <p>Category: Men</p>
                         <p>Price: $50</p>
-                        <button class="add-to-cart-button">ADD TO CART</button>                      
+                        <button class="add-to-cart-button" onclick="addToCart('Product Name', 50)">ADD TO CART</button>                  
                     </div>
                     </div>
                     <div class="product">
@@ -107,8 +125,8 @@
                         <div class="product-details">
                             <h3>Women Long Jacket</h3>
                         <p>Category: Women</p>
-                        <p>Price: $29.99</p>
-                        <button class="add-to-cart-button">ADD TO CART</button>                      
+                        <p>Price: $30</p>
+                        <button class="add-to-cart-button" onclick="addToCart('Product Name', 30)">ADD TO CART</button>                    
                     </div>
                     </div>
                     
@@ -117,8 +135,8 @@
                         <div class="product-details">
                             <h3>Men shirt</h3>
                         <p>Category: Men</p>
-                        <p>Price: $29.99</p>
-                        <button class="add-to-cart-button">ADD TO CART</button>                      
+                        <p>Price: $25</p>
+                        <button class="add-to-cart-button" onclick="addToCart('Product Name', 25)">ADD TO CART</button>                   
                     </div>
                     </div>
                     <div class="product">
@@ -127,7 +145,7 @@
                             <h3>Ladies dress</h3>
                         <p>Category: Women</p>
                         <p>Price: $40</p>
-                        <button class="add-to-cart-button">ADD TO CART</button>                      
+                        <button class="add-to-cart-button" onclick="addToCart('Product Name', 40)">ADD TO CART</button>                 
                     </div>
                     </div>
                     <div class="product">
@@ -135,8 +153,8 @@
                         <div class="product-details">
                             <h3>Men Jeans</h3>
                         <p>Category: Men</p>
-                        <p>Price: $19.99</p>
-                        <button class="add-to-cart-button">ADD TO CART</button>                      
+                        <p>Price: $20</p>
+                        <button class="add-to-cart-button" onclick="addToCart('Product Name', 20)">ADD TO CART</button>                    
                     </div>
                     </div>
                     <div class="product">
@@ -145,7 +163,7 @@
                             <h3>Women Jeans</h3>
                         <p>Category: Women</p>
                         <p>Price: $15</p>
-                        <button class="add-to-cart-button">ADD TO CART</button>                      
+                        <button class="add-to-cart-button" onclick="addToCart('Product Name', 15)">ADD TO CART</button>                
                     </div>
                     </div>
 
@@ -153,11 +171,32 @@
                 </div>
             </div>
         </section>
+        
+        <section id="Others">
+            <div class="feature">
+                <img src="Country wide.jpeg" alt="Shipping Icon">
+                <h3>Countrywide Shipping</h3>
+                <p>Get your favorite fashion items delivered to your doorstep.</p>
+            </div>
+        
+            <div class="feature">
+                <img src="Best Quality icon.jpeg" alt="Quality Icon">
+                <h3>Best Quality</h3>
+                <p>Experience the best quality with our clothing collection.
+                    
+            </div>
+        
+            <div class="feature">
+                <img src="Secure Payment.png" alt="Payments Icon">
+                <h3>Secure Payments</h3>
+                <p>Your payment security is our priority.</p>
+            </div>
+        </section>
 
         <footer>
             <div class="footer-content">
                 <div class="copyright">
-                    &copy: 2023 Rica Fashion.All rights reserved.
+                    &copy 2023 Rica Fashion.All rights reserved.
 
                 </div>
                 <div class="social-media">
