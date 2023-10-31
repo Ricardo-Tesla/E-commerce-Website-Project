@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+#Home{
+    background-image: url('Backgroundimage.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
 .header-container {
     display: flex;
     align-items: center;
@@ -26,7 +34,7 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0;
-    margin-left: 500px;
+    margin-left: 700px;
     margin-bottom: 20px;
 }
 
@@ -58,21 +66,11 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
-.search-bar {
-    background-color: #fff;
-    border: 1px solid #070707; 
-    border-radius: 4px;
-    padding: 8px;
-    color: #0c0c0c;
-    width: 100px; 
-    margin-right: 10px; 
+hr{
+    border-color: #f5b9ae;
 }
-.search-button{
-    color: #fff;
-    background-color: #050505;
-    padding: 8px;
-    margin-right: 20px;
-}
+
+
 .cart-icon {
     color: #0a0a0a;
     font-size: 25px;
@@ -102,7 +100,8 @@ nav ul li a:hover::after{
   
 .text-description {
     font-size: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
+    color: #111111;
   }
 
 .custom-button {
@@ -118,9 +117,10 @@ nav ul li a:hover::after{
     background-color: #ff0000; 
 }
 
-#featured{
-    background-color: #f0f0f0;
-    padding: 20px;
+#Featured{
+    background-color: rgb(236, 241, 241);
+    padding: 10px;
+    margin-bottom: 70px;
 }
 
 .featured-container{
@@ -131,7 +131,7 @@ nav ul li a:hover::after{
 .featured-container h2{
     text-align: center;
     font-size: 24px;
-    margin-top: 200px;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 
@@ -146,7 +146,7 @@ nav ul li a:hover::after{
     width: 20%;
     padding: 10px;
     border: 1px solid #ddd;
-    background-color: #fff;
+    background-color: rgb(236, 241, 241);
     margin-bottom: 20px;
     text-align: center;
 }
@@ -173,6 +173,36 @@ nav ul li a:hover::after{
     background-color: #ff0000;
 }
 
+
+#Others {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 20px;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.feature {
+    text-align: center;
+    width: calc(33.33% - 20px);
+    margin: 0 5px;
+    margin-bottom: 20px;
+}
+
+.feature img {
+    width: 100px;
+    height: auto;
+}
+
+.feature h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.feature p {
+    text-align: left;
+    flex: 1; /* Allow paragraphs to expand to fill available space */
+}
 
 footer {
     background-color: #050505;
